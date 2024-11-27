@@ -28,15 +28,23 @@ public class Ejemplo06 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int tabla;
+        int tabla = 0;
         int operacion;
         int contador = 1;
         int limite;
         
         do {
             operacion = tabla * contador;
+            
+            System.out.println("Imgrese el numero de la tabla");
+            tabla = entrada.nextInt();
+            
+            System.out.println("Imgrese el numero de limite");
+            limite = entrada.nextInt();
+            
             System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
             contador = contador + 1;
+            
         } while (contador <= limite);
 
     }
